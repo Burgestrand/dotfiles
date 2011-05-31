@@ -1,0 +1,63 @@
+[submodule "src/vim/bundle/vim-rails"]
+	path = src/vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "src/vim/bundle/vim-cucumber"]
+	path = src/vim/bundle/vim-cucumber
+	url = git://github.com/tpope/vim-cucumber.git
+[submodule "src/vim/bundle/vim-vividchalk"]
+	path = src/vim/bundle/vim-vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
+[submodule "src/vim/bundle/vim-haml"]
+	path = src/vim/bundle/vim-haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule "src/vim/bundle/vim-endwise"]
+	path = src/vim/bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "src/vim/bundle/vim-surround"]
+	path = src/vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "src/vim/bundle/vim-unimpaired"]
+	path = src/vim/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "src/vim/bundle/vim-repeat"]
+	path = src/vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "src/vim/bundle/nerdcommenter"]
+	path = src/vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "src/vim/bundle/vim-ragtag"]
+	path = src/vim/bundle/vim-ragtag
+	url = git://github.com/tpope/vim-ragtag.git
+[submodule "src/vim/bundle/vim-coffee-script"]
+	path = src/vim/bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "src/vim/bundle/vim-indent-object"]
+	path = src/vim/bundle/vim-indent-object
+	url = git://github.com/michaeljsmith/vim-indent-object.git
+[submodule "src/vim/bundle/vim-rake"]
+	path = src/vim/bundle/vim-rake
+	url = git://github.com/tpope/vim-rake.git
+[submodule "src/vim/bundle/vim-fugitive"]
+	path = src/vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "src/vim/bundle/tabular"]
+	path = src/vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "src/vim/bundle/ZoomWin"]
+	path = src/vim/bundle/ZoomWin
+	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "src/vim/bundle/vim-colors-solarized"]
+	path = src/vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "src/vim/bundle/vim-slim"]
+	path = src/vim/bundle/vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
+[submodule "src/vim/bundle/Command-T"]
+	path = src/vim/bundle/Command-T
+	url = git://github.com/wincent/Command-T.git
+[submodule "src/vim/bundle/CamelCaseMotion"]
+	path = src/vim/bundle/CamelCaseMotion
+	url = git://github.com/bkad/CamelCaseMotion.git
+[submodule "src/vim/bundle/ack-vim"]
+	path = src/vim/bundle/ack-vim
+	url = git://github.com/mileszs/ack.vim.git
