@@ -1,0 +1,12 @@
+colorscheme twilight
+set guicursor=a:blinkcon0
+set guifont=Monaco:h14
+
+" Disable toolbar on startup
+set guioptions-=T
+
+" fullscreen maximizes vertically AND horizontally
+set fuoptions=maxvert,maxhorz
+
+" Disable bell.
+set vb t_vb=
