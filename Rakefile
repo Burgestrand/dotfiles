@@ -6,6 +6,10 @@ def dotfile(*path)
   File.join File.dirname(__FILE__), 'src', *path
 end
 
+def expand(path)
+  File.expand_path(path)
+end
+
 namespace :update do
   desc "Force-update Pathogen"
   task :pathogen do
