@@ -15,7 +15,7 @@ namespace :update do
   task :pathogen do
     Tempfile.open('pathogen') do |f|
       pathogen = dotfile('vim/autoload/pathogen.vim')
-      f << open('https://github.com/tpope/vim-pathogen/blob/master/autoload/pathogen.vim').read
+      f << open('https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim').read
       FileUtils.mkdir_p File.dirname(pathogen)
       FileUtils.install f.path, pathogen
     end
