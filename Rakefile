@@ -35,5 +35,8 @@ end
 
 desc "Install all dotfiles"
 task :install => ['install:vim'] do
-  
+  Dir[dotfile('*')].each do |path|
+    name = File.basename(path)
+    sh 'ln', '-F', '-s', path, expand("~/.#{name}")
+  end
 end
