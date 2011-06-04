@@ -64,3 +64,6 @@
 [submodule "src/vim/bundle/Command-T"]
 	path = src/vim/bundle/Command-T
 	url = git://github.com/vim-scripts/Command-T.git
+[submodule "src/vim/bundle/vim-pastie"]
+	path = src/vim/bundle/vim-pastie
+	url = git://github.com/tpope/vim-pastie.git
