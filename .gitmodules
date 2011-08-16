@@ -67,3 +67,6 @@
 [submodule "src/vim/bundle/vim-pastie"]
 	path = src/vim/bundle/vim-pastie
 	url = git://github.com/tpope/vim-pastie.git
+[submodule "src/vim/bundle/scss-syntax.vim"]
+	path = src/vim/bundle/scss-syntax.vim
+	url = git://github.com/cakebaker/scss-syntax.vim.git
