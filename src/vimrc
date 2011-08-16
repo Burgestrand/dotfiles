@@ -64,7 +64,7 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " Remove white space-only lines before writing files
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\S(\s)\+$/\1/e
 
 " leader is set to the dash key, as it is much friendlier on a swedish
 " keyboard
