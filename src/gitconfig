@@ -17,3 +17,5 @@
 	ui = auto
 [merge]
 	tool = opendiff
+[github]
+	user = Burgestrand
