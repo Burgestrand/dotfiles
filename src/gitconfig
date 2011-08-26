@@ -1,0 +1,19 @@
+[user]
+	name = Kim Burgestrand
+	email = kim@burgestrand.se
+[core]
+	editor = mvim
+	excludesfile = /Users/Kim/.gitignore
+[push]
+	default = current
+[alias]
+  alias = !sh -c '[ -n \"$1\" -a -z \"$2\" ] && git config --global alias.\"$0\" \"$1\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1'
+	co = checkout
+	cm = commit
+	s = status -sb
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	unstage = reset HEAD
+[color]
+	ui = auto
+[merge]
+	tool = opendiff
