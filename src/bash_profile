@@ -14,7 +14,12 @@ export HISTCONTROL=ignoreboth
 # Modify PATH for Homebrew
 export PATH=~/.bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:/usr/X10/bin
 
+# MVIM
+export EDITOR='mvim -f'
+
 # Hub is le github
+alias b='bundle exec'
+alias irb='pry'
 alias git='hub'
 alias lf='ls -laF'
 
