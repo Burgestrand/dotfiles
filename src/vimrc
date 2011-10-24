@@ -100,3 +100,9 @@ map <D-e> :NERDTreeToggle<CR>
 " Replace current line with buffer contents via ctrl-p
 nmap <C-p> "_ddP
 vmap <C-p> "_dP
+
+" Syntastic configuration
+" does not work: SyntasticEnable ruby
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_quiet_warnings=0
