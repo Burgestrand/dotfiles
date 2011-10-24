@@ -2,7 +2,7 @@
 	name = Kim Burgestrand
 	email = kim@burgestrand.se
 [core]
-	editor = mvim -f
+	editor = mvim -f --nomru
 	excludesfile = /Users/Kim/.gitignore
 [push]
 	default = current

@@ -12,7 +12,7 @@ export PS1='\u@\h:$(basename "$(pwd)")$(__git_ps1)\$ '
 export HISTCONTROL=ignoreboth
 
 # Modify PATH for Homebrew
-export PATH=~/.bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:/usr/X10/bin
+export PATH=~/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:/usr/X10/bin
 
 # MVIM
 export EDITOR='mvim -f'
