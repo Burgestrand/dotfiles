@@ -19,3 +19,5 @@
 	tool = opendiff
 [github]
 	user = Burgestrand
+[heroku]
+	account = home
