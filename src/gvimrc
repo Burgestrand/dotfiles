@@ -2,8 +2,10 @@ set background=light
 colorscheme solarized
 set guifont=Monaco:h14
 
-" Disable toolbar on startup
+" Disable toolbar/scrollbar on startup
 set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 
 " fullscreen maximizes vertically AND horizontally
 set fuoptions=maxvert,maxhorz
