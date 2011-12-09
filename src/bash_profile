@@ -22,6 +22,8 @@ alias b='bundle exec'
 alias irb='pry'
 alias git='hub'
 alias lf='ls -laF'
+alias gp='git push'
+alias gl='git pull'
 
 # RVM!
 [[ -s "/Users/Kim/.rvm/scripts/rvm" ]] && source "/Users/Kim/.rvm/scripts/rvm"
