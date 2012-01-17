@@ -14,6 +14,9 @@ export HISTCONTROL=ignoreboth
 # Modify PATH for Homebrew
 export PATH=~/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:/usr/X11/bin
 
+# Modify NODE_PATH for rpm
+export NODE_PATH=/usr/local/lib/node_modules
+
 # MVIM
 export EDITOR='vi'
 
