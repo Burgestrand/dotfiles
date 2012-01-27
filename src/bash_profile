@@ -28,5 +28,9 @@ alias lf='ls -laF'
 alias gp='git push'
 alias gl='git pull'
 
+# Function to change directory to a Project
+function p { cd ~/Projects/$1; }
+complete -C ~/.bash_completion/project.sh -o default p
+
 # RVM!
 [[ -s "/Users/Kim/.rvm/scripts/rvm" ]] && source "/Users/Kim/.rvm/scripts/rvm"
