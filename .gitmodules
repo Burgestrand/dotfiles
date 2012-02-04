@@ -85,9 +85,9 @@
 [submodule "src/vim/bundle/syntastic"]
 	path = src/vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "src/vim/bundle/vim-markdown-preview"]
-	path = src/vim/bundle/vim-markdown-preview
-	url = git://github.com/nelstrom/vim-markdown-preview.git
 [submodule "src/vim/bundle/vim-bundler"]
 	path = src/vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "src/vim/bundle/hammer.vim"]
+	path = src/vim/bundle/hammer.vim
+	url = git://github.com/robgleeson/hammer.vim.git

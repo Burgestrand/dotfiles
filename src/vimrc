@@ -101,14 +101,19 @@ map <D-e> :NERDTreeToggle<CR>
 nmap <C-p> "_ddP
 vmap <C-p> "_dP
 
+" Set Hammer HTML template styling
+let g:HAMMER_TEMPLATE='cloudapp'
+
 " Syntastic configuration
 " does not work: SyntasticEnable ruby
 " let g:syntastic_c_no_include_search = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=0
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['sass', 'scss'] }
 
 function! syntastic#c#CheckRuby()
   return ' -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/x86_64-darwin11.2.0 -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1'
 endfunction
-
