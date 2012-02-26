@@ -27,6 +27,7 @@ alias git='hub'
 alias lf='ls -laF'
 alias gp='git push'
 alias gl='git pull'
+alias gs='git s'
 
 # Function to change directory to a Project
 function p { cd ~/Projects/$1; }
