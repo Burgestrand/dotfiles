@@ -103,6 +103,13 @@ vmap <C-p> "_dP
 
 " Set Hammer HTML template styling
 
+" Solarized colorscheme
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+set background=light
+
 " Syntastic configuration
 " does not work: SyntasticEnable ruby
 " let g:syntastic_c_no_include_search = 1
