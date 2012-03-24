@@ -5,7 +5,7 @@
 	editor = vi
 	excludesfile = /Users/Kim/.gitignore
 [push]
-	default = current
+	default = tracking
 [alias]
   alias = !sh -c '[ -n \"$1\" -a -z \"$2\" ] && git config --global alias.\"$0\" \"$1\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1'
 	co = checkout
