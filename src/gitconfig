@@ -2,7 +2,7 @@
 	name = Kim Burgestrand
 	email = kim@burgestrand.se
 [core]
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+	editor = ~/Applications/MacVim.app/Contents/MacOS/Vim
 	excludesfile = /Users/Kim/.gitignore
 [push]
 	default = current
