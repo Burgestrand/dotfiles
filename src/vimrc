@@ -90,10 +90,6 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
-" Maps for jj to act as Esc
-ino jj <esc>
-cno jj <c-c>
-
 " Map CMD+E to NERDTreeToggle
 map <D-e> :NERDTreeToggle<CR>
 
@@ -120,6 +116,13 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['sass', 'scss'] }
 
+" Configure vim-slime to use tmux
+let g:slime_target = "tmux"
+
 function! syntastic#c#CheckRuby()
   return ' -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/x86_64-darwin11.2.0 -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1'
+endfunction
+
+function! RubyBalloonexpr()
+  return ""
 endfunction
