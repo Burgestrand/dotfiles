@@ -1,0 +1,29 @@
+#!/bin/sh
+
+ipfw="/usr/bin/sudo /sbin/ipfw "
+$ipfw -f flush
+
+cmd="$ipfw -f add "
+
+# Allow the loopback device
+$cmd 01000 allow ip from any to any via lo*
+
+# OpenVPN (hostnames no worky, *many* ips to cover, this is good enough)
+$cmd 01110 allow ip from any to any dst-port 1194-1201 out
+$cmd 01111 allow ip from any 1194-1201 to any in
+
+# DHCP
+$cmd 02000 allow udp from any 67 to any dst-port 68 in
+$cmd 02001 allow udp from any 68 to any dst-port 67 out
+
+# DNS (needed for tunnelblick to resolve vpn IP)
+$cmd 03000 allow ip from any to any dst-port 53 out
+$cmd 03001 allow ip from any to any src-port 53 in
+
+# let everything on the tun used by the vpn in
+$cmd 04000 allow ip from any to any via tun0
+$cmd 04001 allow ip from any to any via tap0
+
+# Block it ALL
+$cmd deny in
+$cmd deny out

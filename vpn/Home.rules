@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ipfw="/usr/bin/sudo /sbin/ipfw "
+
+$ipfw -f flush
+$ipfw -f add 65535 allow ip from any to any
