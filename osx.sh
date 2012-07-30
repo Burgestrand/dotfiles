@@ -5,9 +5,9 @@
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-scutil --set ComputerName "Kim’s Macbook Pro"
-scutil --set HostName "Kim’s Macbook Pro"
-scutil --set LocalHostName "Kim’s-Macbook-Pro"
+scutil --set ComputerName "Kim's Laptop"
+scutil --set HostName "Kim's Laptop"
+scutil --set LocalHostName "Kims-Laptop"
 
 # Menu bar: disable transparency
 # defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -45,7 +45,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
-# Disable Resume system-wide
+# Disable Resume system-wide (e.g. Preview opening previous windows on start)
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
