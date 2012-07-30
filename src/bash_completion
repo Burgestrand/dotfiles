@@ -1,0 +1,2 @@
+#!/bin/sh
+complete -C ~/.bash_completion.d/project.sh -o default p
