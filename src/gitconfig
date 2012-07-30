@@ -2,10 +2,10 @@
 	name = Kim Burgestrand
 	email = kim@burgestrand.se
 [core]
-	editor = vi
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
 	excludesfile = /Users/Kim/.gitignore
 [push]
-	default = tracking
+	default = current
 [alias]
   alias = !sh -c '[ -n \"$1\" -a -z \"$2\" ] && git config --global alias.\"$0\" \"$1\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1'
 	co = checkout
