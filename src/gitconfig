@@ -20,4 +20,5 @@
 [github]
 	user = Burgestrand
 [heroku]
-	account = home
+[heroku]
+	account = elabs

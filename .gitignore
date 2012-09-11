@@ -1,0 +1,4 @@
+# ignore everything
+src/ssh/*
+# except for config
+!src/ssh/config

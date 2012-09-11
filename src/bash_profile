@@ -13,19 +13,22 @@ export PATH=~/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:
 
 # Modify NODE_PATH for rpm
 export NODE_PATH=/usr/local/lib/node_modules
+export PATH=/usr/local/share/npm/bin:$PATH
 
 # MVIM
 export EDITOR='~/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Hub is le github
 alias b='bundle exec'
+alias g='hub'
 alias git='hub'
 alias ll='ls -laF'
 alias gp='git push'
 alias gl='git pull'
 alias gs='git s'
-alias rs='bundle exec rails server'
 alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
+alias rs='bundle exec rails server'
+alias rc='bundle exec rails console'
 
 # Function to change directory to a Project
 function p { cd ~/Projects/$1; }
