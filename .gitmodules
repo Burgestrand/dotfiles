@@ -94,3 +94,9 @@
 [submodule "src/vim/bundle/vim-processing"]
 	path = src/vim/bundle/vim-processing
 	url = git://github.com/sophacles/vim-processing.git
+[submodule "src/vim/bundle/numbers.vim"]
+	path = src/vim/bundle/numbers.vim
+	url = https://github.com/myusuf3/numbers.vim.git
+[submodule "src/vim/bundle/rename.vim"]
+	path = src/vim/bundle/rename.vim
+	url = git://github.com/henrik/rename.vim.git
