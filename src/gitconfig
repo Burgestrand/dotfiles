@@ -22,3 +22,5 @@
 [heroku]
 [heroku]
 	account = elabs
+[branch]
+	autosetuprebase = always
