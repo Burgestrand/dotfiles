@@ -10,9 +10,6 @@ set guioptions-=L
 " fullscreen maximizes vertically AND horizontally
 set fuoptions=maxvert,maxhorz
 
-" Disable baloon!
-set noballooneval
-
 " Disable bell.
 set vb t_vb=
 
@@ -21,3 +18,6 @@ nnoremap <D-right> :vertical resize -5<cr>
 nnoremap <D-up> :resize +5<cr>
 nnoremap <D-down> :resize -5<cr>
 nnoremap <D-left> :vertical resize +5<cr>
+
+" turn of annoying ruby warnings thing.
+set noballooneval

@@ -1,4 +1,4 @@
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 set tabstop=2
 set smarttab
@@ -123,6 +123,5 @@ function! syntastic#c#CheckRuby()
   return ' -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/x86_64-darwin11.2.0 -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1'
 endfunction
 
-function! RubyBalloonexpr()
-  return ""
-endfunction
+" turn of annoying ruby warnings thing.
+set noballooneval
