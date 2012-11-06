@@ -14,6 +14,7 @@ export PATH=~/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/sbin:
 # Modify NODE_PATH for rpm
 export NODE_PATH=/usr/local/lib/node_modules
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=./node_modules/.bin:$PATH
 
 # MVIM
 export EDITOR='~/Applications/MacVim.app/Contents/MacOS/Vim'
