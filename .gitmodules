@@ -100,3 +100,6 @@
 [submodule "src/vim/bundle/browser-refresh.vim"]
 	path = src/vim/bundle/browser-refresh.vim
 	url = git://github.com/mkitt/browser-refresh.vim.git
+[submodule "src/vim/bundle/ctrlp.vim"]
+	path = src/vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
