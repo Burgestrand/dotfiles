@@ -97,3 +97,6 @@
 [submodule "src/vim/bundle/rename.vim"]
 	path = src/vim/bundle/rename.vim
 	url = git://github.com/henrik/rename.vim.git
+[submodule "src/vim/bundle/browser-refresh.vim"]
+	path = src/vim/bundle/browser-refresh.vim
+	url = git://github.com/mkitt/browser-refresh.vim.git

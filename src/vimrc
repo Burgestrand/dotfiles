@@ -80,6 +80,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" browser reload plugin
+map <silent><leader>r :RRB<CR>
+
 " highlight search results
 set hlsearch
 
