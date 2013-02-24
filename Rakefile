@@ -26,10 +26,10 @@ end
 namespace :install do
   desc "Do some vim-install specific thingies"
   task :vim => ['update:pathogen'] do
-    Dir.chdir dotfile('vim/bundle/Command-T/ruby/command-t') do
-      sh "ruby extconf.rb"
-      sh "make"
-    end
+    # Dir.chdir dotfile('vim/bundle/Command-T/ruby/command-t') do
+    #  sh "ruby extconf.rb"
+    #  sh "make"
+    # end
   end
 end
 
