@@ -23,9 +23,9 @@ export PATH=./node_modules/.bin:$PATH
 export EDITOR='~/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Ruby falcon patch
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_FREE_MIN=500000
-export RUBY_HEAP_MIN_SLOTS=40000
+# export RUBY_GC_MALLOC_LIMIT=1000000000
+# export RUBY_FREE_MIN=500000
+# export RUBY_HEAP_MIN_SLOTS=40000
 
 # Hub is le github
 alias b='bundle exec'
