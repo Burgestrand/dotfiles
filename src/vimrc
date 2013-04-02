@@ -122,8 +122,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " Configure vim-slime to use tmux
 let g:slime_target = "tmux"
 
-" function! syntastic#c#CheckRuby()
-"   return ' -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/x86_64-darwin11.2.0 -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1'
-" endfunction
+function! syntastic#c#CheckRuby()
+  return ' -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p327-falcon/include/ruby-1.9.1/x86_64-darwin12.2.0 -I/Users/Kim/.rvm/rubies/ruby-1.9.3-p327-falcon/include/ruby-1.9.1'
+endfunction
 
 let g:syntastic_enable_balloons = 0
