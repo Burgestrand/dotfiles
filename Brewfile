@@ -9,3 +9,5 @@ brew 'ruby-build'
 
 brew 'zsh'
 brew 'zsh-completions'
+
+brew 'nvm'
