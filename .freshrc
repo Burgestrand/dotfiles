@@ -9,6 +9,12 @@
 # See http://freshshell.com/readme for documentation.
 
 fresh freshshell/fresh bin/fresh --bin
-fresh vimrc --file
+
 fresh bash_profile --file
+
+fresh vimrc --file
+fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
+fresh vim --file=~/.vim/
+vim +PlugInstall +qall
+
 fresh gitconfig --file

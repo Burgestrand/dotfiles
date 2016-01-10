@@ -39,6 +39,12 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+call plug#begin('~/.vim/bundle/')
+
+" colorschemes
+Plug 'altercation/vim-colors-solarized'
+
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -145,13 +151,8 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-
-try
-    colorscheme desert
-catch
-endtry
-
 set background=light
+colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")

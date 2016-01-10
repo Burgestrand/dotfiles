@@ -1,4 +1,4 @@
-all: brew fresh
+all: brew fresh vim
 
 brew := /usr/local/bin/brew
 $(brew): 
