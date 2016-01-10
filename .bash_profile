@@ -13,5 +13,5 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 function trash() {
-  mv $1 ~/.Trash
+  mv -f $1 ~/.Trash/$(date -u +"%Y-%m-%dT%H-%M-%SZ")-$(basename $1)
 }
