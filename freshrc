@@ -10,6 +10,7 @@
 
 fresh freshshell/fresh bin/fresh --bin
 
+fresh bash --file=~/.bash/
 fresh bash_profile --file
 
 fresh vimrc --file

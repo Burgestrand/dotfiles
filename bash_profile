@@ -12,6 +12,5 @@ eval "$(rbenv init -)"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-function trash() {
-  mv -f $1 ~/.Trash/$(date -u +"%Y-%m-%dT%H-%M-%SZ")-$(basename $1)
-}
+source $HOME/.bash/aliases
+source $HOME/.bash/functions/*
