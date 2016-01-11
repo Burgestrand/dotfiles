@@ -8,3 +8,5 @@ brew 'rbenv'
 brew 'ruby-build'
 
 brew 'nvm'
+
+cask 'spotify'
