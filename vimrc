@@ -49,7 +49,7 @@ Plug 'kchmck/vim-coffee-script'
 
 " functionality
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
 
 call plug#end()
 
