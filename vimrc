@@ -149,7 +149,7 @@ set mat=2
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
-set t_vb=
+set vb t_vb=
 set tm=500
 
 " Add a bit extra margin to the left
@@ -167,6 +167,8 @@ colorscheme solarized
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
