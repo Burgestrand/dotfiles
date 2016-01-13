@@ -50,11 +50,18 @@ Plug 'kchmck/vim-coffee-script'
 " functionality
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
+Plug 'danro/rename.vim', { 'on': 'Rename' }
 
 call plug#end()
 
 " Map CMD+E to NERDTree
 map <D-e> :NERDTreeToggle<CR>
+
+" Use ag instead of Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
