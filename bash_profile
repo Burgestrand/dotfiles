@@ -13,4 +13,7 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 source $HOME/.bash/aliases
-source $HOME/.bash/functions/*
+for file in `find $HOME/.bash/functions/* -type f`
+do
+  source $file
+done
