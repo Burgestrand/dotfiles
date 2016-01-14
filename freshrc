@@ -19,3 +19,4 @@ fresh vim --file=~/.vim/
 echo "Vim files sourced, don't forget to run: vim +PlugInstall"
 
 fresh gitconfig --file
+fresh gitignore --file

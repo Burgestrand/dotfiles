@@ -3,3 +3,5 @@
   email = kim@burgestrand.se
 [push]
   default = simple
+[core]
+  excludesfile = /Users/kim/.gitignore
