@@ -1,5 +1,8 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 export PATH=~/.bin/:$PATH
 
 export FRESH_BIN_PATH=~/.bin
