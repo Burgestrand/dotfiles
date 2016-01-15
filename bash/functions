@@ -1,3 +1,7 @@
+function p {
+  cd ~/Projects/$1
+}
+
 function trash() {
   mv -f $1 ~/.Trash/$(date -u +"%Y-%m-%dT%H-%M-%SZ")-$(basename $1)
 }
