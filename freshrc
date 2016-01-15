@@ -13,6 +13,8 @@ fresh freshshell/fresh bin/fresh --bin
 fresh bash --file=~/.bash/
 fresh bash_profile --file
 
+fresh ssh/config --file=~/.ssh/config
+
 fresh vimrc --file
 fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 fresh vim --file=~/.vim/
