@@ -5,6 +5,8 @@ Plug 'altercation/vim-colors-solarized'
 
 " syntax
 Plug 'kchmck/vim-coffee-script'
+Plug 'elixir-lang/vim-elixir'
+Plug 'lambdatoast/elm.vim'
 
 " functionality
 Plug 'tpope/vim-surround'
