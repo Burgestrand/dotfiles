@@ -17,7 +17,8 @@ fresh ssh/config --file=~/.ssh/config
 
 fresh vimrc --file
 fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
-fresh vim --file=~/.vim/
+fresh vim/plugins.vim --file=~/.vim/plugins.vim
+fresh vim/mappings.vim --file=~/.vim/settings.vim
 echo "Vim files sourced, don't forget to run: vim +PlugInstall"
 
 fresh gitconfig --file

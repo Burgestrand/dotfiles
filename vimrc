@@ -39,32 +39,8 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.vim/bundle/')
-
-" colorschemes
-Plug 'altercation/vim-colors-solarized'
-
-" syntax
-Plug 'kchmck/vim-coffee-script'
-
-" functionality
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
-Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'danro/rename.vim', { 'on': 'Rename' }
-
-call plug#end()
-
-" Map CMD+E to NERDTree
-map <D-e> :NERDTreeToggle<CR>
-
-" Use ag instead of Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-" Map <SPACE> to unhighlight search
-nnoremap <Space> :let @/ = ""
+source ~/.vim/plugins.vim
+source ~/.vim/settings.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -172,7 +148,10 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 set background=light
-colorscheme solarized
+try
+  colorscheme solarized
+catch
+endtry
 
 " Set extra options when running in GUI mode
 if has("gui_running")
