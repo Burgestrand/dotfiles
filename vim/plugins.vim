@@ -10,8 +10,10 @@ Plug 'lambdatoast/elm.vim'
 
 " functionality
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'danro/rename.vim', { 'on': 'Rename' }
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
