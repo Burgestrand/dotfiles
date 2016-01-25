@@ -3,7 +3,8 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export PATH=~/.bin/:$PATH
+export PATH="~/.bin/:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # brew coreutils
 
 export FRESH_BIN_PATH=~/.bin
 source "$HOME/.fresh/build/shell.sh"

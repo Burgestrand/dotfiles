@@ -1,4 +1,5 @@
 brew 'bash-completion'
+brew 'coreutils'
 
 brew 'git'
 brew 'hub'
