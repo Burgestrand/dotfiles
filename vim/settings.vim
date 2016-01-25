@@ -17,3 +17,16 @@ set number
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+
+" Open new splits below/to right
+set splitbelow
+set splitright
+
+" Consistent big Y
+nnoremap Y y$
+
+" Do not allow abandoning unsaved buffers
+set nohidden
+
+" Disable Ex mode.
+nnoremap Q <nop>
