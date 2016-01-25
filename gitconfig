@@ -5,3 +5,8 @@
   default = simple
 [core]
   excludesfile = /Users/kim/.gitignore
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
