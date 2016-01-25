@@ -12,7 +12,7 @@ Plug 'lambdatoast/elm.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
-Plug 'mileszs/ack.vim', { 'on': 'Ack' }
+Plug 'mileszs/ack.vim'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'ctrlpvim/ctrlp.vim'
 
