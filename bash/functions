@@ -2,22 +2,35 @@ function p {
   cd ~/Projects/$1
 }
 
+# Move something to the trash.
 function trash() {
   mv -f $1 ~/.Trash/$(date -u +"%Y-%m-%dT%H-%M-%SZ")-$(basename $1)
 }
 
+# Run tests inside the clipboard, optionally with the given command. Formatted clipboard as: rspec ./path/to/file.rb:52
 function retest() {
   command=$@
   : ${command:="bundle exec rspec"}
   pbpaste | awk '{{ print $2 }}' | xargs $command
 }
 
+# Generate a new password and add it to clipboard.
 function pw() {
   PASSWORD_FILE=/usr/share/dict/words
   NUM_WORDS=${1:-3}
 
   PASSWORD=$(shuf -n $NUM_WORDS /usr/share/dict/words | paste -sd ' ' | tr '[:upper:]' '[:lower:]')
 
-  echo $PASSWORD | pbcopy
+  echo -n $PASSWORD | pbcopy
   echo $PASSWORD
+}
+
+# List all branches with my initials in them.
+function gb() {
+  git branch $@ | grep kbs
+}
+
+# Delete all of my merged branches.
+function gbd() {
+  git fetch --prune && gb --merged | xargs git branch -d
 }
