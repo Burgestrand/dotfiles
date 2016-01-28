@@ -34,3 +34,8 @@ function gb() {
 function gbd() {
   git fetch --prune && gb --merged | xargs git branch -d
 }
+
+# Create a new branch with my initials with the given name.
+function gcb() {
+  git checkout -b "kbs-$1" ${@:2}
+}

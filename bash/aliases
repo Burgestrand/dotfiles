@@ -1,6 +1,6 @@
 alias git=hub
 alias ll='ls -laF'
-alias gp='git push'
+alias gp='git push --set-upstream'
 alias gl='git pull'
 alias gs='git status'
 alias b='bundle exec'
