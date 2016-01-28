@@ -1,3 +1,6 @@
+" Font and size
+set guifont=Menlo\ Regular:h14
+
 " Map CMD+E to NERDTree
 map <D-e> :NERDTreeToggle<CR>
 
