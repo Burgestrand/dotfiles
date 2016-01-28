@@ -37,5 +37,9 @@ function gbd() {
 
 # Create a new branch with my initials with the given name.
 function gcb() {
-  git checkout -b "kbs-$1" ${@:2}
+  BRANCH_NAME="kbs-$1"
+
+  git checkout -b $BRANCH_NAME ${@:2}
+  git config --local "branch.$BRANCH_NAME.remote" origin
+  git config --local "branch.$BRANCH_NAME.merge" refs/heads/$BRANCH_NAME
 }
