@@ -13,6 +13,9 @@ endif
 " Map <SPACE> to unhighlight search
 nnoremap <Space> :let @/ = ""<CR>
 
+" Copy path of current file to OS buffer
+nnoremap <leader>p :let @+ = expand("%")<CR>
+
 " Line numbers are nice
 set number
 
