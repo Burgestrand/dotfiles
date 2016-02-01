@@ -11,3 +11,4 @@ brew 'ruby-build'
 brew 'nvm'
 
 cask 'spotify'
+cask 'java'
