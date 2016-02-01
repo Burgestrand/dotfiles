@@ -9,10 +9,11 @@ brew: $(brew)
 fresh := $(HOME)/.bin/fresh
 $(HOME)/.freshrc:
 	ln -sf $(CURDIR)/freshrc $(HOME)/.freshrc
-$(fresh): export FRESH_BIN_PATH := ${dir $(fresh)}
-$(fresh): $(HOME)/.freshrc
-	mkdir ~/.fresh/
+$(HOME)/.fresh/:
+	mkdir -p ~/.fresh/
 	git clone https://github.com/freshshell/fresh ~/.fresh/source/freshshell/fresh
+$(fresh): export FRESH_BIN_PATH := ${dir $(fresh)}
+$(fresh): $(HOME)/.fresh/ $(HOME)/.freshrc
+	cd ~/.fresh/source/freshshell/fresh && git pull
 	~/.fresh/source/freshshell/fresh/bin/fresh
 fresh: $(fresh)
-	$(fresh)
