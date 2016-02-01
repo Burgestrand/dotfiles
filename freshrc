@@ -20,7 +20,7 @@ fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 fresh vim/plugins.vim --file=~/.vim/plugins.vim
 fresh vim/settings.vim --file=~/.vim/settings.vim
 fresh vim/filetypes.vim --file=~/.vim/filetypes.vim
-vim +PlugInstall +PlugUpdate +qall
+vim +PlugInstall +PlugUpdate +PlugClean +qall
 
 fresh gitconfig --file
 fresh gitignore --file
