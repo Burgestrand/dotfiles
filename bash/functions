@@ -10,7 +10,7 @@ function trash() {
 # Run tests inside the clipboard, optionally with the given command. Formatted clipboard as: rspec ./path/to/file.rb:52
 function retest() {
   command=$@
-  : ${command:="bundle exec rspec"}
+  : ${command:=bundle exec $(pbpaste | awk '{ print $1 }' | head -1)}
   pbpaste | awk '{{ print $2 }}' | xargs $command
 }
 
