@@ -14,7 +14,7 @@ endif
 nnoremap <Space> :let @/ = ""<CR>
 
 " Copy path of current file to OS buffer
-nnoremap <leader>p :let @+ = expand("%")<CR>
+nnoremap <leader>y :let @+ = expand("%")<CR>
 
 " Line numbers are nice
 set number
