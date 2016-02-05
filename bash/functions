@@ -32,7 +32,7 @@ function gb() {
 
 # Delete all of my merged branches.
 function gbd() {
-  git fetch --prune && gb --merged master | xargs git branch -d
+  git fetch --prune && gb --merged origin/master | xargs git branch -d
 }
 
 # Create a new branch with my initials with the given name.
