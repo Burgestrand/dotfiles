@@ -13,3 +13,4 @@ brew 'nvm'
 
 cask 'spotify'
 cask 'java'
+cask 'vlc'
