@@ -1,6 +1,9 @@
 " Font and size
 set guifont=Menlo\ Regular:h14
 
+" Fix leader
+let mapleader = "-"
+
 " Map CMD+E to NERDTree
 map <D-e> :NERDTreeToggle<CR>
 
@@ -14,7 +17,7 @@ endif
 nnoremap <Space> :let @/ = ""<CR>
 
 " Copy path of current file to OS buffer
-nnoremap <leader>y :let @+ = expand("%")<CR>
+nnoremap <leader>Y :let @+ = expand("%")<CR>
 
 " Line numbers are nice
 set number
