@@ -13,6 +13,12 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" CTRL-P don't jump to open
+let g:ctrlp_switch_buffer="et"
+
+" Always auto-delete the old buffer if you rename or move a file
+let NERDTreeAutoDeleteBuffer=1
+
 " Map <SPACE> to unhighlight search
 nnoremap <Space> :let @/ = ""<CR>
 
@@ -36,6 +42,9 @@ nnoremap Y y$
 
 " Do not allow abandoning unsaved buffers
 set nohidden
+
+" Don't switch to open tab when opening file
+set switchbuf=""
 
 " Disable Ex mode.
 nnoremap Q <nop>
