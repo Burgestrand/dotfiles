@@ -5,6 +5,7 @@ brew 'git'
 brew 'hub'
 brew 'ghi'
 brew 'git-lfs'
+brew 'heroku'
 
 brew 'rbenv'
 brew 'ruby-build'
