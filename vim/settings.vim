@@ -25,6 +25,11 @@ nnoremap <Space> :let @/ = ""<CR>
 " Copy path of current file to OS buffer
 nnoremap <leader>Y :let @+ = expand("%")<CR>
 
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+let g:rspec_runner = "os_x_iterm"
+
 " Line numbers are nice
 set number
 

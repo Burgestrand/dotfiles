@@ -17,5 +17,6 @@ Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
 Plug 'mileszs/ack.vim'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'thoughtbot/vim-rspec'
 
 call plug#end()
