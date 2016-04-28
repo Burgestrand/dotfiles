@@ -3,6 +3,9 @@
   email = kim@burgestrand.se
 [push]
   default = simple
+[branch]
+  autosetuprebase = always
+  autosetupmerge = always
 [core]
   excludesfile = /Users/kim/.gitignore
 [alias]
