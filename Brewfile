@@ -1,3 +1,6 @@
+tap 'neovim/neovim'
+brew 'neovim'
+
 brew 'bash-completion'
 brew 'coreutils'
 

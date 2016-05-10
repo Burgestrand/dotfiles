@@ -16,6 +16,7 @@ fresh bash_profile --file
 fresh ssh/config --file=~/.ssh/config
 
 fresh vimrc --file
+fresh vimrc --file=~/.vim/init.vim
 fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 fresh vim/plugins.vim --file=~/.vim/plugins.vim
 fresh vim/settings.vim --file=~/.vim/settings.vim
