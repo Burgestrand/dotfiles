@@ -6,6 +6,7 @@ brew 'hub'
 brew 'ghi'
 brew 'git-lfs'
 brew 'heroku'
+brew 'ag'
 
 brew 'rbenv'
 brew 'ruby-build'
