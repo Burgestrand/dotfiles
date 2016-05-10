@@ -1,6 +1,3 @@
-tap 'neovim/neovim'
-brew 'neovim'
-
 brew 'bash-completion'
 brew 'coreutils'
 
@@ -19,3 +16,4 @@ cask 'spotify'
 cask 'java'
 cask 'vlc'
 cask 'spectacle'
+cask 'macvim'
