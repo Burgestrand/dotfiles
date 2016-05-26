@@ -13,7 +13,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-vinegar'
 Plug 'mileszs/ack.vim'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'ctrlpvim/ctrlp.vim'

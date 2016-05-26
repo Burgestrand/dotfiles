@@ -1,8 +1,8 @@
 " Font and size
 set guifont=Menlo\ Regular:h14
 
-" Fix leader
-let mapleader = "-"
+" Show trailing whitespace
+let ruby_space_errors = 1
 
 " Map CMD+E to NERDTree
 map <D-e> :NERDTreeToggle<CR>
