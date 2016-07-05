@@ -1,11 +1,13 @@
 " Font and size
 set guifont=Menlo\ Regular:h14
 
+set tw=80 " Text width for e.g. gq
+set cc=80 " Color column 80
+
 " Show trailing whitespace
 let ruby_space_errors = 1
 
-" Map CMD+E to NERDTree
-map <D-e> :NERDTreeToggle<CR>
+let g:netrw_liststyle=4
 
 " Use ag for speed
 if executable('ag')
