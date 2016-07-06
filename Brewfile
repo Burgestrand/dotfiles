@@ -11,6 +11,9 @@ brew 'ag'
 brew 'rbenv'
 brew 'ruby-build'
 
+brew 'postgres'
+brew 'redis'
+
 brew 'nvm'
 
 cask 'spotify'
