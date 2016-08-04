@@ -18,5 +18,7 @@ Plug 'mileszs/ack.vim'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-rails'
+Plug 'eiginn/netrw' " upgrade
 
 call plug#end()
