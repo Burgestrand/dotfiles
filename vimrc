@@ -40,8 +40,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/plugins.vim
-source ~/.vim/settings.vim
-source ~/.vim/filetypes.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -146,6 +144,7 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Enable syntax highlighting
 syntax enable 
 set background=light
@@ -192,10 +191,6 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=2
 set tabstop=2
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
 
 set ai "Auto indent
 set si "Smart indent
@@ -428,3 +423,8 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+" Source my custom stuff
+
+source ~/.vim/settings.vim
+source ~/.vim/filetypes.vim

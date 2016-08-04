@@ -1,8 +1,12 @@
 " Font and size
 set guifont=Menlo\ Regular:h14
 
-set tw=80 " Text width for e.g. gq
-set cc=80 " Color column 80
+set textwidth=80
+set colorcolumn=80
+
+" Dont auto line break
+set formatoptions-=t
+set nolinebreak
 
 " Show trailing whitespace
 let ruby_space_errors = 1
@@ -30,7 +34,7 @@ nnoremap <leader>Y :let @+ = expand("%")<CR>
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-let g:rspec_runner = "os_x_iterm"
+let g:rspec_runner = "os_x_iterm2"
 
 " Line numbers are nice
 set number
