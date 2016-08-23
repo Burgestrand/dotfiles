@@ -20,5 +20,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
 Plug 'eiginn/netrw' " upgrade
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
