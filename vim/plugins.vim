@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-endwise'
 Plug 'mileszs/ack.vim'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'ctrlpvim/ctrlp.vim'
