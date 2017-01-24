@@ -22,5 +22,6 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
 Plug 'eiginn/netrw' " upgrade
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'rizzatti/dash.vim'
 
 call plug#end()
