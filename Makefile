@@ -5,7 +5,6 @@ $(brew):
 	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew: $(brew)
 	brew bundle
-	brew linkapps
 
 fresh := $(HOME)/.bin/fresh
 $(HOME)/.freshrc:
