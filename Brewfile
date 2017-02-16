@@ -16,6 +16,9 @@ brew 'redis'
 
 brew 'nvm'
 
+brew 'swiftgen'
+brew 'chisel'
+
 cask 'spotify'
 cask 'java'
 cask 'vlc'
