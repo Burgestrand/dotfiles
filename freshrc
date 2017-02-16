@@ -27,3 +27,4 @@ vim +PlugInstall +PlugUpdate +PlugClean +qall
 fresh gitconfig --file
 fresh gitignore --file
 fresh gemrc --file
+fresh lldbinit --file
