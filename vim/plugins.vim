@@ -8,6 +8,8 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'isRuslan/vim-es6'
+Plug 'posva/vim-vue'
+Plug 'jparise/vim-graphql'
 
 " functionality
 Plug 'tpope/vim-surround'
