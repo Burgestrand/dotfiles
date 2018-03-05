@@ -9,6 +9,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 export PATH="~/.bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # brew coreutils
+GIT_PS1_SHOWDIRTYSTATE=true
 PROMPT_COMMAND='__git_ps1 "[\[\033[32m\]\w\[\033[0m\]]" "\\\$ "'
 
 export FRESH_BIN_PATH=~/.bin
