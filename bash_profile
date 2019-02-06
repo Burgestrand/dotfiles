@@ -18,8 +18,8 @@ source "$HOME/.fresh/build/shell.sh"
 source $(brew --prefix)/etc/bash_completion
 eval "$(rbenv init -)"
 
-# export NVM_DIR=~/.nvm
-# source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 source $HOME/.bash/aliases
 source $HOME/.bash/functions

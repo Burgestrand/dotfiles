@@ -20,7 +20,6 @@ brew 'swiftgen'
 brew 'chisel'
 
 cask 'spotify'
-cask 'java'
 cask 'vlc'
 cask 'spectacle'
 cask 'macvim'
