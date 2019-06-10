@@ -19,7 +19,7 @@ source $(brew --prefix)/etc/bash_completion
 eval "$(rbenv init -)"
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh --no-use
 
 source $HOME/.bash/aliases
 source $HOME/.bash/functions
