@@ -5,7 +5,6 @@ brew 'git'
 brew 'hub'
 brew 'ghi'
 brew 'git-lfs'
-brew 'heroku'
 brew 'ag'
 
 brew 'rbenv'
@@ -15,6 +14,9 @@ brew 'postgres'
 brew 'redis'
 
 brew 'nvm'
+
+tap 'heroku/brew'
+brew 'heroku'
 
 brew 'swiftgen'
 brew 'chisel'
