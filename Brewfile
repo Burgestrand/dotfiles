@@ -34,6 +34,7 @@ tap "heroku/brew"
 brew "heroku"
 
 # Casks
+cask "Caffeine"
 cask "docker"
 cask "flux"
 cask "iterm2"
