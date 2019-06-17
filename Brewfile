@@ -46,6 +46,7 @@ cask "rowanj-gitx"
 cask "spectacle"
 cask "spotify"
 cask "vlc"
+cask "zeplin"
 
 # Mac App Store
 mas "1Password", id: 443987910
