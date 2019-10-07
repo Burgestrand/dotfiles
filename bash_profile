@@ -20,3 +20,6 @@ eval "$(rbenv init -)"
 
 source $HOME/.bash/aliases
 source $HOME/.bash/functions
+
+source $HOME/Tools/google-cloud-sdk/path.bash.inc
+source $HOME/Tools/google-cloud-sdk/completion.bash.inc
