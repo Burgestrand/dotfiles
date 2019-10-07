@@ -4,12 +4,10 @@ call plug#begin('~/.vim/bundle/')
 Plug 'altercation/vim-colors-solarized'
 
 " syntax
-Plug 'kchmck/vim-coffee-script'
-Plug 'elixir-lang/vim-elixir'
-Plug 'ElmCast/elm-vim'
 Plug 'isRuslan/vim-es6'
 Plug 'posva/vim-vue'
 Plug 'jparise/vim-graphql'
+Plug 'mxw/vim-jsx'
 
 " functionality
 Plug 'tpope/vim-surround'
@@ -22,8 +20,10 @@ Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
-" Plug 'eiginn/netrw' " upgrade
+Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'rizzatti/dash.vim'
+
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'yarn install'}
 
 call plug#end()
