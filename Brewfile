@@ -14,7 +14,7 @@ brew 'ruby-build'
 brew 'postgres'
 brew 'redis'
 
-brew 'nvm'
+brew 'n'
 
 brew 'swiftgen'
 brew 'chisel'
