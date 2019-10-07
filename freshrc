@@ -28,5 +28,3 @@ fresh gitconfig --file
 fresh gitignore --file
 fresh gemrc --file
 fresh lldbinit --file
-
-brew bundle
