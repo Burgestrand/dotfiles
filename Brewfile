@@ -1,29 +1,56 @@
-brew 'bash-completion'
-brew 'coreutils'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "mas"
 
-brew 'git'
-brew 'hub'
-brew 'ghi'
-brew 'git-lfs'
-brew 'heroku'
-brew 'ag'
+# Utilities
+brew "bash-completion"
+brew "coreutils"
+brew "chisel"
+brew "cocoapods"
+brew "the_silver_searcher"
 
-brew 'rbenv'
-brew 'ruby-build'
+# Git
+brew "ghi"
+brew "git"
+brew "git-lfs"
+brew "hub"
 
-brew 'postgres'
-brew 'redis'
-
+# Node
 brew 'n'
+brew "yarn"
 
-brew 'swiftgen'
-brew 'chisel'
+# Ruby
+brew "rbenv"
+brew "ruby-build"
 
-cask 'spotify'
-cask 'vlc'
-cask 'spectacle'
-cask 'macvim'
-cask 'rowanj-gitx'
-cask 'iterm2'
-cask 'flux'
-cask 'ngrok'
+# Daemons
+brew "redis"
+brew "postgresql", restart_service: true
+
+# Heroku
+tap "heroku/brew"
+brew "heroku"
+
+# Casks
+cask "Caffeine"
+cask "docker"
+cask "flux"
+cask "iterm2"
+cask "java"
+cask "macvim"
+cask "ngrok"
+cask "react-native-debugger"
+cask "rowanj-gitx"
+cask "spectacle"
+cask "spotify"
+cask "vlc"
+cask "zeplin"
+
+# Mac App Store
+mas "1Password", id: 443987910
+mas "Bear", id: 1091189122
+mas "Color Picker", id: 641027709
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353

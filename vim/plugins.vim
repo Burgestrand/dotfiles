@@ -23,7 +23,4 @@ Plug 'tpope/vim-rails'
 Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'kristijanhusak/vim-js-file-import', {'do': 'yarn install'}
-
 call plug#end()
