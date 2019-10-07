@@ -4,6 +4,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export N_PREFIX=$HOME/n
 
 export HISTCONTROL=ignoreboth:erasedups
 
