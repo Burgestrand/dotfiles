@@ -147,7 +147,7 @@ set foldcolumn=1
 
 " Enable syntax highlighting
 syntax enable 
-set background=light
+set background=dark
 try
   colorscheme solarized
 catch

@@ -10,8 +10,8 @@
 
 fresh freshshell/fresh bin/fresh --bin
 
-fresh bash --file=~/.bash/
-fresh bash_profile --file
+fresh shell --file=~/.shell/
+fresh zshrc --file
 
 fresh ssh/config --file=~/.ssh/config
 
@@ -28,5 +28,3 @@ fresh gitconfig --file
 fresh gitignore --file
 fresh gemrc --file
 fresh lldbinit --file
-
-brew bundle
