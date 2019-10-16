@@ -1,8 +1,4 @@
-source $HOME/.shell/aliases
-
-# Git CLI prompt.
-GIT_PS1_SHOWDIRTYSTATE=true
-PROMPT_COMMAND='__git_ps1 "[\[\033[32m\]\w\[\033[0m\]]" "\\\$ "'
+source "$HOME/.zsh/aliases"
 
 # Fresh shell tools.
 path+=~/.bin
@@ -13,9 +9,21 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
-# Enable autocompletion.
+# RBENV!
+eval "$(rbenv init --no-rehash - zsh)"
+
+# Enable zsh stuff, this is autocompletion.
 autoload -Uz compinit
 compinit
 
-# RBENV!
-eval "$(rbenv init --no-rehash - zsh)"
+# … and this is prompt!
+fpath+=("$HOME/.zsh/pure")
+autoload -Uz promptinit
+promptinit
+prompt pure
+
+# Enable vi mode for line editing.
+bindkey -v
+export KEYTIMEOUT=1
+
+bindkey "^R" history-incremental-search-backward

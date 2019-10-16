@@ -10,7 +10,7 @@
 
 fresh freshshell/fresh bin/fresh --bin
 
-fresh shell --file=~/.shell/
+fresh zsh --file=~/.zsh/
 fresh zshrc --file
 
 fresh ssh/config --file=~/.ssh/config
