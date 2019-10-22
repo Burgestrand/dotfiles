@@ -4,25 +4,14 @@ source "$HOME/.zsh/aliases"
 path+=~/.bin
 source "$HOME/.fresh/build/shell.sh"
 
-# Homebrew auto completion.
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
+source "$HOME/.zsh/nvm"
+source "$HOME/.zsh/rbenv"
 
-# RBENV!
-eval "$(rbenv init --no-rehash - zsh)"
+source "$HOME/.zsh/autocompletion"
+source "$HOME/.zsh/prompt"
+source "$HOME/.zsh/history"
 
-# Enable zsh stuff, this is autocompletion.
-autoload -Uz compinit
-compinit
-
-# … and this is prompt!
-fpath+=("$HOME/.zsh/pure")
-autoload -Uz promptinit
-promptinit
-prompt pure
-
-# Enable vi mode for line editing.
+# Keybinds! Vim mode!
 bindkey -v
 export KEYTIMEOUT=1
 

@@ -18,7 +18,7 @@ brew "git-lfs"
 brew "hub"
 
 # Node
-brew 'n'
+brew 'nvm'
 
 # Ruby
 brew "rbenv"
