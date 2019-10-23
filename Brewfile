@@ -33,10 +33,8 @@ tap "heroku/brew"
 brew "heroku"
 
 # Casks
-cask "Caffeine"
 cask "flux"
 cask "iterm2"
-cask "java"
 cask "spectacle"
 cask "spotify"
 cask "visual-studio-code"
@@ -47,3 +45,4 @@ mas "Bear", id: 1091189122
 mas "Color Picker", id: 641027709
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
+mas "Owly", id: 882812218
