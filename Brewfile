@@ -33,6 +33,7 @@ tap "heroku/brew"
 brew "heroku"
 
 # Casks
+cask "fork"
 cask "flux"
 cask "iterm2"
 cask "spectacle"
