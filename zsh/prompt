@@ -1,0 +1,5 @@
+# … and this is prompt!
+fpath+=("$HOME/.zsh/pure")
+autoload -Uz promptinit
+promptinit
+prompt pure

@@ -1,0 +1,8 @@
+# Homebrew auto completion.
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+# Enable zsh stuff, this is autocompletion.
+autoload -Uz compinit
+compinit

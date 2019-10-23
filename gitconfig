@@ -1,5 +1,5 @@
 [user]
-  name = Kim Burge Strand
+  name = Kim Burgestrand
   email = kim@burgestrand.se
 [push]
   default = simple
@@ -7,7 +7,7 @@
   autosetuprebase = always
   autosetupmerge = always
 [core]
-  excludesfile = /Users/kim/.gitignore
+  excludesfile = /Users/Kim/.gitignore
 [alias]
   co = checkout
   br = branch
@@ -15,3 +15,5 @@
   st = status
 [credential]
 	helper = osxkeychain
+[hub]
+  protocol = https

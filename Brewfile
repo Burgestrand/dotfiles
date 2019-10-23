@@ -18,8 +18,7 @@ brew "git-lfs"
 brew "hub"
 
 # Node
-brew 'n'
-brew "yarn"
+brew 'nvm'
 
 # Ruby
 brew "rbenv"
@@ -35,17 +34,12 @@ brew "heroku"
 
 # Casks
 cask "Caffeine"
-cask "docker"
 cask "flux"
 cask "iterm2"
 cask "java"
-cask "macvim"
-cask "ngrok"
-cask "react-native-debugger"
-cask "rowanj-gitx"
 cask "spectacle"
 cask "spotify"
-cask "vlc"
+cask "visual-studio-code"
 
 # Mac App Store
 mas "1Password", id: 443987910
