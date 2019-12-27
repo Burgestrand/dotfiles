@@ -17,12 +17,8 @@ brew "git"
 brew "git-lfs"
 brew "hub"
 
-# Node
-brew 'nvm'
-
-# Ruby
-brew "rbenv"
-brew "ruby-build"
+# ASDF
+brew 'asdf'
 
 # Daemons
 brew "redis"
