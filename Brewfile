@@ -37,7 +37,7 @@ cask "spotify"
 cask "visual-studio-code"
 
 # Mac App Store
-mas "1Password", id: 443987910
+mas "1Password", id: 1333542190
 mas "Bear", id: 1091189122
 mas "Color Picker", id: 641027709
 mas "Slack", id: 803453959
