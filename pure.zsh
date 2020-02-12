@@ -57,7 +57,7 @@ prompt_pure_set_title() {
 	setopt localoptions noshwordsplit
 
 	# Emacs terminal does not support settings the title.
-	(( ${+EMACS} )) && return
+	(( ${+EMACS} || ${+INSIDE_EMACS} )) && return
 
 	case $TTY in
 		# Don't set title over serial console.
@@ -292,6 +292,16 @@ prompt_pure_async_git_fetch() {
 	# Set SSH `BachMode` to disable all interactive SSH password prompting.
 	export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-"ssh"} -o BatchMode=yes"
 
+	local ref
+	ref=$(command git symbolic-ref -q HEAD)
+	local -a remote
+	remote=($(command git for-each-ref --format='%(upstream:remotename) %(refname)' $ref))
+
+	if [[ -z $remote[1] ]]; then
+		# No remote specified for this branch, skip fetch.
+		return 97
+	fi
+
 	# Default return code, which indicates Git fetch failure.
 	local fail_code=99
 
@@ -317,7 +327,13 @@ prompt_pure_async_git_fetch() {
 		fi
 	' CHLD
 
-	command git -c gc.auto=0 fetch >/dev/null &
+	# Only fetch information for the current branch and avoid
+	# fetching tags or submodules to speed up the process.
+	command git -c gc.auto=0 fetch \
+		--quiet \
+		--no-tags \
+		--recurse-submodules=no \
+		$remote &>/dev/null &
 	wait $! || return $fail_code
 
 	unsetopt monitor
@@ -331,6 +347,20 @@ prompt_pure_async_git_arrows() {
 	command git rev-list --left-right --count HEAD...@'{u}'
 }
 
+# Try to lower the priority of the worker so that disk heavy operations
+# like `git status` has less impact on the system responsivity.
+prompt_pure_async_renice() {
+	setopt localoptions noshwordsplit
+
+	if command -v renice >/dev/null; then
+		command renice +15 -p $$
+	fi
+
+	if command -v ionice >/dev/null; then
+		command ionice -c 3 -p $$
+	fi
+}
+
 prompt_pure_async_tasks() {
 	setopt localoptions noshwordsplit
 
@@ -339,6 +369,7 @@ prompt_pure_async_tasks() {
 		async_start_worker "prompt_pure" -u -n
 		async_register_callback "prompt_pure" prompt_pure_async_callback
 		typeset -g prompt_pure_async_init=1
+		async_job "prompt_pure" prompt_pure_async_renice
 	}
 
 	# Update the current working directory of the async worker.
@@ -490,6 +521,13 @@ prompt_pure_async_callback() {
 						do_render=1
 					fi
 					;;
+				97)
+					# No remote available, make sure to clear git arrows if set.
+					if [[ -n $prompt_pure_git_arrows ]]; then
+						typeset -g prompt_pure_git_arrows=
+						do_render=1
+					fi
+					;;
 				99|98)
 					# Git fetch failed.
 					;;
@@ -502,6 +540,8 @@ prompt_pure_async_callback() {
 					fi
 					;;
 			esac
+			;;
+		prompt_pure_async_renice)
 			;;
 	esac
 
@@ -593,7 +633,7 @@ prompt_pure_state_setup() {
 	[[ $UID -eq 0 ]] && username='%F{$prompt_pure_colors[user:root]}%n%f'"$hostname"
 
 	typeset -gA prompt_pure_state
-	prompt_pure_state[version]="1.10.3"
+	prompt_pure_state[version]="1.11.0"
 	prompt_pure_state+=(
 		username "$username"
 		prompt	 "${PURE_PROMPT_SYMBOL:-❯}"
@@ -603,13 +643,15 @@ prompt_pure_state_setup() {
 prompt_pure_system_report() {
 	setopt localoptions noshwordsplit
 
-	print - "- Zsh: $(zsh --version)"
+	print - "- Zsh: $($SHELL --version) ($SHELL)"
 	print -n - "- Operating system: "
 	case "$(uname -s)" in
 		Darwin)	print "$(sw_vers -productName) $(sw_vers -productVersion) ($(sw_vers -buildVersion))";;
 		*)	print "$(uname -s) ($(uname -v))";;
 	esac
-	print - "- Terminal program: $TERM_PROGRAM ($TERM_PROGRAM_VERSION)"
+	print - "- Terminal program: ${TERM_PROGRAM:-unknown} (${TERM_PROGRAM_VERSION:-unknown})"
+	print -n - "- Tmux: "
+	[[ -n $TMUX ]] && print "yes" || print "no"
 
 	local git_version
 	git_version=($(git --version))  # Remove newlines, if hub is present.
@@ -617,10 +659,12 @@ prompt_pure_system_report() {
 
 	print - "- Pure state:"
 	for k v in "${(@kv)prompt_pure_state}"; do
-		print - "\t- $k: \`${(q)v}\`"
+		print - "    - $k: \`${(q)v}\`"
 	done
+	print - "- PROMPT: \`$(typeset -p PROMPT)\`"
+	print - "- Colors: \`$(typeset -p prompt_pure_colors)\`"
 	print - "- Virtualenv: \`$(typeset -p VIRTUAL_ENV_DISABLE_PROMPT)\`"
-	print - "- Prompt: \`$(typeset -p PROMPT)\`"
+	print - "- Conda: \`$(typeset -p CONDA_CHANGEPS1)\`"
 
 	local ohmyzsh=0
 	typeset -la frameworks
@@ -639,8 +683,8 @@ prompt_pure_system_report() {
 	print - "- Detected frameworks: ${(j:, :)frameworks}"
 
 	if (( ohmyzsh )); then
-		print - "\t- Oh My Zsh:"
-		print - "\t\t- Plugins: ${(j:, :)plugins}"
+		print - "    - Oh My Zsh:"
+		print - "        - Plugins: ${(j:, :)plugins}"
 	fi
 }
 
@@ -685,6 +729,7 @@ prompt_pure_setup() {
 		path                 blue
 		prompt:error         red
 		prompt:success       magenta
+		prompt:continuation  242
 		user                 242
 		user:root            default
 		virtualenv           242
@@ -708,10 +753,11 @@ prompt_pure_setup() {
 	PROMPT='%(12V.%F{$prompt_pure_colors[virtualenv]}%12v%f .)'
 
 	# Prompt turns red if the previous command didn't exit with 0.
-	PROMPT+='%(?.%F{$prompt_pure_colors[prompt:success]}.%F{$prompt_pure_colors[prompt:error]})${prompt_pure_state[prompt]}%f '
+	local prompt_indicator='%(?.%F{$prompt_pure_colors[prompt:success]}.%F{$prompt_pure_colors[prompt:error]})${prompt_pure_state[prompt]}%f '
+	PROMPT+=$prompt_indicator
 
 	# Indicate continuation prompt by … and use a darker color for it.
-	PROMPT2='%F{242}%_… %f%(?.%F{magenta}.%F{red})${prompt_pure_state[prompt]}%f '
+	PROMPT2='%F{$prompt_pure_colors[prompt:continuation]}… %(1_.%_ .%_)%f'$prompt_indicator
 
 	# Store prompt expansion symbols for in-place expansion via (%). For
 	# some reason it does not work without storing them in a variable first.
@@ -742,6 +788,10 @@ prompt_pure_setup() {
 
 	# Guard against Oh My Zsh themes overriding Pure.
 	unset ZSH_THEME
+
+	# Guard against (ana)conda changing the PS1 prompt
+	# (we manually insert the env when it's available).
+	export CONDA_CHANGEPS1=no
 }
 
 prompt_pure_setup "$@"
