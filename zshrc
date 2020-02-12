@@ -9,6 +9,10 @@ source "$HOME/.fresh/build/shell.sh"
 source "$HOME/.zsh/autocompletion"
 source "$HOME/.zsh/prompt"
 source "$HOME/.zsh/history"
+source "$HOME/.zsh/iterm2"
+
+# Default editor.
+export EDITOR=nvim
 
 # Keybinds! Vim mode!
 bindkey -v
