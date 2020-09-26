@@ -1,7 +1,9 @@
-all: brew fresh
+mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
+
+all: brew pure fresh
 
 brew := /usr/local/bin/brew
-$(brew): 
+$(brew):
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 brew: $(brew)
 	brew bundle
@@ -17,3 +19,9 @@ $(fresh): $(HOME)/.fresh/ $(HOME)/.freshrc
 	cd ~/.fresh/source/freshshell/fresh && git pull
 	~/.fresh/source/freshshell/fresh/bin/fresh
 fresh: $(fresh)
+
+pure := $(dir $(mkfile_path))/zsh/pure
+$(pure):
+	git subtree pull --prefix zsh/pure https://github.com/sindresorhus/pure.git master --squash
+pure: $(pure)
+.PHONY: $(pure)
