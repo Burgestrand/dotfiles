@@ -1,5 +1,3 @@
-mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
-
 all: brew pure fresh
 
 brew := /usr/local/bin/brew
@@ -20,8 +18,8 @@ $(fresh): $(HOME)/.fresh/ $(HOME)/.freshrc
 	~/.fresh/source/freshshell/fresh/bin/fresh
 fresh: $(fresh)
 
-pure := $(dir $(mkfile_path))/zsh/pure
+pure := zsh/pure
 $(pure):
-	git subtree pull --prefix zsh/pure https://github.com/sindresorhus/pure.git master --squash
+	git subtree pull --prefix "$(pure)" https://github.com/sindresorhus/pure.git master --squash
 pure: $(pure)
 .PHONY: $(pure)
