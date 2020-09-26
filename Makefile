@@ -2,7 +2,7 @@ all: brew fresh
 
 brew := /usr/local/bin/brew
 $(brew): 
-	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 brew: $(brew)
 	brew bundle
 
