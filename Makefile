@@ -1,4 +1,4 @@
-all: brew pure fresh zsh-fix
+all: brew pure fresh zsh-fix $(projects)
 
 brew := /usr/local/bin/brew
 $(brew):
@@ -22,9 +22,12 @@ zsh-fix:
 	sudo chown -R $$(whoami):admin /usr/local/share/zsh
 	sudo chmod -R 0755 /usr/local/share/zsh
 
+projects := $(HOME)/Projects
+$(projects):
+	mkdir $(projects)
+
 pure := zsh/pure
 $(pure):
 	git subtree pull --prefix "$(pure)" https://github.com/sindresorhus/pure.git main --squash
 pure: $(pure)
 .PHONY: $(pure)
-.PHONY: pure-fix
