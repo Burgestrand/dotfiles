@@ -21,5 +21,8 @@ fresh: $(fresh)
 pure := zsh/pure
 $(pure):
 	git subtree pull --prefix "$(pure)" https://github.com/sindresorhus/pure.git master --squash
-pure: $(pure)
+pure-fix:
+	git checkout HEAD
+pure: pure-fix $(pure)
 .PHONY: $(pure)
+.PHONY: pure-fix
