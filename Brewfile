@@ -33,6 +33,7 @@ cask "spotify"
 cask "visual-studio-code"
 cask "notion"
 cask "docker"
+cask "firefox"
 
 # Mac App Store
 mas "1Password", id: 1333542190
