@@ -1,4 +1,4 @@
-all: brew pure fresh
+all: brew pure fresh zsh-fix
 
 brew := /usr/local/bin/brew
 $(brew):
@@ -17,6 +17,10 @@ $(fresh): $(HOME)/.fresh/ $(HOME)/.freshrc
 	cd ~/.fresh/source/freshshell/fresh && git pull
 	~/.fresh/source/freshshell/fresh/bin/fresh
 fresh: $(fresh)
+
+zsh-fix:
+	sudo chown -R $$(whoami):admin /usr/local/share/zsh
+	sudo chmod -R 0755 /usr/local/share/zsh
 
 pure := zsh/pure
 $(pure):
