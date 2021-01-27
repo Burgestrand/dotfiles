@@ -1,4 +1,4 @@
-all: brew fresh projects defaults
+all: brew fresh pure projects defaults
 
 brew := /usr/local/bin/brew
 $(brew):
@@ -17,8 +17,8 @@ $(HOME)/.fresh/:
 $(fresh): export FRESH_BIN_PATH := ${dir $(fresh)}
 $(fresh): $(HOME)/.fresh/ $(HOME)/.freshrc
 	cd ~/.fresh/source/freshshell/fresh && git pull
+fresh: $(fresh)
 	~/.fresh/source/freshshell/fresh/bin/fresh
-fresh: $(fresh) pure
 
 projects := $(HOME)/Projects
 $(projects):
