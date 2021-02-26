@@ -213,24 +213,6 @@ Add `prompt pure` to your `~/.zpreztorc`.
 
 Add `zmodule sindresorhus/pure --source async.zsh --source pure.zsh` to your `.zimrc` and run `zimfw install`.
 
-### [antigen](https://github.com/zsh-users/antigen)
-
-Update your `.zshrc` file with the following two lines (order matters). Do not use the `antigen theme` function.
-
-```sh
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
-```
-
-### [antibody](https://github.com/getantibody/antibody)
-
-Update your `.zshrc` file with the following two lines (order matters):
-
-```sh
-antibody bundle mafredri/zsh-async
-antibody bundle sindresorhus/pure
-```
-
 ### [zplug](https://github.com/zplug/zplug)
 
 Update your `.zshrc` file with the following two lines:
@@ -267,8 +249,7 @@ See [FAQ Archive](https://github.com/sindresorhus/pure/wiki/FAQ-Archive) for pre
 - **Bash**
 	- [sapegin/dotfiles](https://github.com/sapegin/dotfiles) - [Prompt](https://github.com/sapegin/dotfiles/blob/dd063f9c30de7d2234e8accdb5272a5cc0a3388b/includes/bash_prompt.bash) and [color theme](https://github.com/sapegin/dotfiles/tree/master/color) for Terminal.app.
 - **Fish**
-	- [brandonweiss/pure.fish](https://github.com/brandonweiss/pure.fish) - Pure-inspired prompt for Fish. Not intended to have feature parity.
-	- [rafaelrinaldi/pure](https://github.com/rafaelrinaldi/pure) - Support for bare Fish and various framework ([Oh-My-Fish](https://github.com//oh-my-fish/oh-my-fish), [Fisherman](https://github.com//fisherman/fisherman), and [Wahoo](https://github.com//bucaran/wahoo)).
+	- [pure-fish/pure](https://github.com/pure-fish/pure) - Fully tested Fish port aiming for feature parity.
 - **Rust**
 	- [xcambar/purs](https://github.com/xcambar/purs) - Pure-inspired prompt in Rust.
 - **Go**
