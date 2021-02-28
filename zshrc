@@ -10,6 +10,7 @@ source "$HOME/.zsh/autocompletion"
 source "$HOME/.zsh/prompt"
 source "$HOME/.zsh/history"
 source "$HOME/.zsh/iterm2"
+source "$HOME/.zsh/homebrew"
 source "$HOME/.zsh/yarn"
 
 # Default editor.
