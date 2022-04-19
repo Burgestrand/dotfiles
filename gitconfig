@@ -19,3 +19,5 @@
   protocol = https
 [pull]
   rebase = true
+[merge]
+  conflictstyle = diff3
