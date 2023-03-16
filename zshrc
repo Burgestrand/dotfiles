@@ -4,7 +4,7 @@ source "$HOME/.zsh/aliases"
 path+=~/.bin
 source "$HOME/.fresh/build/shell.sh"
 
-. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 source "$HOME/.zsh/autocompletion"
 source "$HOME/.zsh/prompt"
