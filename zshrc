@@ -4,14 +4,12 @@ source "$HOME/.zsh/aliases"
 path+=~/.bin
 source "$HOME/.fresh/build/shell.sh"
 
-. /usr/local/opt/asdf/libexec/asdf.sh
-
+source "$HOME/.zsh/asdf"
 source "$HOME/.zsh/autocompletion"
 source "$HOME/.zsh/prompt"
 source "$HOME/.zsh/history"
 source "$HOME/.zsh/iterm2"
 source "$HOME/.zsh/homebrew"
-source "$HOME/.zsh/yarn"
 
 # Default editor.
 export EDITOR=nvim

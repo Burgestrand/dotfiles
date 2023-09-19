@@ -6,5 +6,8 @@ It's not set up to work for any computer. There are some Kim-specific strings so
 
 ## Usage
 
-1. Clone to ~/.dotfiles.
-1. Run `make`.
+```bash
+git clone https://github.com/Burgestrand/dotfiles.git ~/.dotfiles
+cd -
+make
+```
